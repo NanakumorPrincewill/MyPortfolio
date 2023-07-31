@@ -17,7 +17,7 @@ const About = () => {
             <h2 className="py-1 font-bold text-orange-500">Who I Am?</h2>
             <p className="py-2 text-gray-600">
               I specialize in building dynamic, user-friendly, mobile responsive
-              front-end UI web applications. I passionate learning new
+              front-end UI web applications. I&#39;m passionate learning new
               technologies and understand there is more than one way to
               accomplish a task. Though I am most proficient in building
               front-end applications using HTML, CSS, Tailwind CSS, Javascript
