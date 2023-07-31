@@ -98,7 +98,7 @@ const Hero = () => {
               </div>
             </Link>
 
-            <Link href="/resume">
+            <Link href="#skills">
               <div className="p-4 duration-300 ease-in bg-orange-500 rounded-lg shadow-lg cursor-pointer shadow-gray-400 hover:scale-110 hover:text-white ">
                 <BsFillPersonLinesFill />
               </div>
