@@ -5,6 +5,7 @@ import { HiArrowDown } from "react-icons/hi";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const [typeEffect] = useTypewriter({
@@ -18,18 +19,62 @@ const Hero = () => {
     <section id="hero" className="w-full h-screen text-center">
       <div className="max-w-[1240px] w-full h-full mx-auto p-4 flex justify-center  items-center">
         <div className="mt-28">
-          <p className="text-sm tracking-widest uppercase">Connect with me</p>
-          <h2 className="py-2 text-4xl">
+          <motion.p
+            className="text-sm tracking-widest uppercase"
+            animate={{
+              x: 0,
+              opacity: 1,
+            }}
+            initial={{
+              x: "-100vw",
+              opacity: 0,
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 70,
+            }}
+          >
+            Connect with me
+          </motion.p>
+          <motion.h2
+            className="py-2 text-4xl"
+            animate={{
+              y: 0,
+              opacity: 1,
+            }}
+            initial={{
+              y: "-100vh",
+              opacity: 0,
+            }}
+            transition={{
+              type: "spring",
+              duration: 3,
+            }}
+          >
             Hi, I&#39;m {""}
             <span className="text-orange-500">
               {typeEffect}
               <Cursor />
             </span>
-          </h2>
-          <h1 className="py-1 text-6xl font-bold text-gray-700">
+          </motion.h2>
+          <motion.h1
+            className="py-1 text-6xl font-bold text-gray-700"
+            animate={{
+              x: 0,
+              opacity: 2,
+            }}
+            initial={{
+              x: "100vw",
+              opacity: 0,
+            }}
+            transition={{
+              type: "spring",
+              duration: 3,
+            }}
+          >
             A Front-End Web Developer
             <hr className="w-10 h-1 mx-auto mt-2 bg-orange-500 border-0"></hr>
-          </h1>
+          </motion.h1>
           <p className="py-4 text-center text-gray-600 sm:max-w-[70%] m-auto">
             I&#39;m focused on building responsive front-end web applications.
           </p>

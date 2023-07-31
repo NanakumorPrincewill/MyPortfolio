@@ -1,9 +1,11 @@
 "use client";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
+import { FaTelegramPlane } from "react-icons/fa";
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const router = useRouter();
@@ -105,16 +107,20 @@ export default function Contact() {
               </div>
             </div>
             <div class="p-2 w-full">
-              <button
+              <motion.button
                 type="submit"
                 class="flex mx-auto text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg transition ease-in duration-200"
+                whileTap={{
+                  scale: 0.5,
+                }}
               >
-                Send Message
-              </button>
+                Send <FaTelegramPlane size={25} />
+              </motion.button>
             </div>
           </form>
         </div>
       </div>
+
       <div className="container flex justify-end px-2 pt-10 mx-auto">
         <Link href="/">
           <div className="p-4 duration-300 ease-in rounded-full shadow-lg cursor-pointer animate-bounce">
