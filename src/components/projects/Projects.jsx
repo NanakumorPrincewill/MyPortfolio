@@ -38,6 +38,7 @@ const ProjectsSection = () => {
                       width={600}
                       height={400}
                       className="duration-500 ease-in shadow-xl rounded-xl hover:opacity-80"
+                      target="_blank"
                     />
                   </Link>
                 </div>

@@ -52,9 +52,9 @@ export default function Contact() {
       </div>
       <div class="container relative mx-auto ">
         <div class="w-full mx-auto">
-          <form onSubmit={handleSubmit} class="flex flex-wrap">
+          <div class="flex flex-wrap">
             <div class="p-2 w-1/2">
-              <div class="relative">
+              <form class="relative" onSubmit={handleSubmit}>
                 <label for="name" class="leading-7 text-sm text-gray-600">
                   Name
                 </label>
@@ -63,8 +63,9 @@ export default function Contact() {
                   class="w-full focus:bg-white bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-orange-500  text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   onChange={(e) => setName(e.target.value)}
                   value={name}
+                  required
                 />
-              </div>
+              </form>
             </div>
             <div class="p-2 w-1/2">
               <div class="relative">
@@ -117,7 +118,7 @@ export default function Contact() {
                 Send <FaTelegramPlane size={25} />
               </motion.button>
             </div>
-          </form>
+          </div>
         </div>
       </div>
 
