@@ -31,14 +31,13 @@ const ProjectsSection = () => {
             <div key={project.id}>
               <div className="flex flex-col md:flex-row md:space-x-12 ">
                 <div className="mt-6 border-t-4 border-orange-500 rounded-xl md:w-1/2">
-                  <Link href={project.link}>
+                  <Link href={project.link} target="_blank">
                     <Image
                       src={project.image}
                       alt="image"
                       width={600}
                       height={400}
                       className="duration-500 ease-in shadow-xl rounded-xl hover:opacity-80"
-                      target="_blank"
                     />
                   </Link>
                 </div>
