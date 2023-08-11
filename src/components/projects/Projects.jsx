@@ -10,7 +10,7 @@ const projects = [
     description:
       "This is a React full stack CRUD web application built for  users to create , delete, and update their profile details. It is also connected to a functioning database and hosted on netlify ",
     tectnology: "Technologies:",
-    tectnologyDescription: "Tailwind css, Nextjs13.4 and MongoDB ",
+    tectnologyDescription: "Tailwind css, Nextjs13.4 and MongoDB. ",
     github: "https://github.com/NanakumorPrincewill/Nextjs_Crud_Application",
     link: "https://nexjs-crud-app.netlify.app",
   },
