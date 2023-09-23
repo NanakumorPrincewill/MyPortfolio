@@ -46,7 +46,10 @@ const skills = [
 const Skills = () => {
   return (
     <section id="skills" className="px-2 py-10 mt-24 md:mt-0 scroll-mt-24">
-      <h1 className="mb-4 text-4xl font-bold tracking-widest text-center text-gray-700 md:text-5xl lg:text-6xl">
+      <h1
+        data-aos="zoom-in-up"
+        className="mb-4 text-4xl font-bold tracking-widest text-center text-gray-700 md:text-5xl lg:text-6xl"
+      >
         Skills
         <hr className="w-10 h-1 mx-auto mt-2 bg-orange-500 border-0"></hr>
       </h1>

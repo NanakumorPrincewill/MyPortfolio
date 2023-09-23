@@ -13,6 +13,7 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,7 +31,6 @@ export default function Contact() {
         },
         body: JSON.stringify({ name, email, subject, message }),
       });
-
       if (res.ok) {
         toast.success("Message Sent ");
         router.push("/success");
@@ -40,12 +40,16 @@ export default function Contact() {
     } catch (error) {
       console.log(error);
     }
+    setLoading(true);
   };
 
   return (
     <section id="contact" className="px-2 py-10">
       <div>
-        <h1 className="mb-6 text-4xl font-bold tracking-widest text-center text-gray-700 md:text-5xl lg:text-6xl">
+        <h1
+          data-aos="zoom-in-up"
+          className="mb-6 text-4xl font-bold tracking-widest text-center text-gray-700 md:text-5xl lg:text-6xl"
+        >
           Contact
           <hr className="w-10 h-1 mx-auto mt-2 bg-orange-500 border-0"></hr>
         </h1>
@@ -55,10 +59,15 @@ export default function Contact() {
           <form class="flex flex-wrap" onSubmit={handleSubmit}>
             <div class="p-2 w-1/2">
               <div class="relative">
-                <label for="name" class="leading-7 text-sm text-gray-600">
+                <label
+                  data-aos="zoom-in-up"
+                  for="name"
+                  class="leading-7 text-sm text-gray-600"
+                >
                   Name
                 </label>
                 <input
+                  data-aos="zoom-in-up"
                   type="text"
                   class="w-full focus:bg-white bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-orange-500  text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   onChange={(e) => setName(e.target.value)}
@@ -68,10 +77,15 @@ export default function Contact() {
             </div>
             <div class="p-2 w-1/2">
               <div class="relative">
-                <label for="email" class="leading-7 text-sm text-gray-600">
+                <label
+                  data-aos="zoom-in-up"
+                  for="email"
+                  class="leading-7 text-sm text-gray-600"
+                >
                   Email
                 </label>
                 <input
+                  data-aos="zoom-in-up"
                   type="email"
                   id="email"
                   name="email"
@@ -83,10 +97,15 @@ export default function Contact() {
             </div>
             <div class="p-2 w-full">
               <div class="relative">
-                <label for="name" class="leading-7 text-sm text-gray-600">
+                <label
+                  data-aos="zoom-in-up"
+                  for="name"
+                  class="leading-7 text-sm text-gray-600"
+                >
                   Subject
                 </label>
                 <input
+                  data-aos="zoom-in-up"
                   type="text"
                   class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-orange-500 focus:bg-white focus:none  text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   onChange={(e) => setSubject(e.target.value)}
@@ -96,23 +115,29 @@ export default function Contact() {
             </div>
             <div class="p-2 w-full">
               <div class="relative">
-                <label for="message" class="leading-7 text-sm text-gray-600">
+                <label
+                  data-aos="zoom-in-up"
+                  for="message"
+                  class="leading-7 text-sm text-gray-600"
+                >
                   Message
                 </label>
                 <textarea
+                  data-aos="zoom-in-up"
                   class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:none  focus:bg-white focus:border-orange-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                   onChange={(e) => setMessage(e.target.value)}
                   value={message}
                 ></textarea>
               </div>
             </div>
-            <div class="p-2 w-full">
+            <div data-aos="flip-up" class="p-2 w-full">
               <motion.button
                 type="submit"
-                class="flex mx-auto text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg transition ease-in duration-200"
+                class={`flex mx-auto text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg transition ease-in duration-200 ${loading}`}
                 whileTap={{
                   scale: 0.9,
                 }}
+                disabled={loading}
               >
                 Send <FaTelegramPlane size={25} />
               </motion.button>

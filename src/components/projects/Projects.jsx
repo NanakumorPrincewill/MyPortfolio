@@ -8,7 +8,7 @@ const projects = [
     image: "/crudapp.png",
     name: "Crud Application",
     description:
-      "This is a React full stack CRUD web application built for  users to create , delete, and update their profile details. It is also connected to a functioning database and hosted on netlify ",
+      "This is a React full stack CRUD web application built for  users to create , delete, and update their profile details. It is also connected to a functioning database and hosted on netlify. With this program, I was able to understand how Nextjs app router and page routin works ",
     tectnology: "Technologies:",
     tectnologyDescription: "Tailwind css, Nextjs13.4 and MongoDB",
     github: "https://github.com/NanakumorPrincewill/Nextjs_Crud_Application",
@@ -20,7 +20,10 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="px-2 py-10 scroll-mt-20">
       <div>
-        <h1 className="mb-10 text-4xl font-bold tracking-widest text-center text-gray-700 md:text-5xl lg:text-6xl">
+        <h1
+          data-aos="zoom-in-up"
+          className="mb-10 text-4xl font-bold tracking-widest text-center text-gray-700 md:text-5xl lg:text-6xl"
+        >
           Projects
           <hr className="w-10 h-1 mx-auto mt-2 bg-orange-500 border-0"></hr>
         </h1>
