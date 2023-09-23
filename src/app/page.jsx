@@ -13,7 +13,7 @@ export default function Home() {
     AOS.init({
       easing: "ease-out-back",
       duration: 1200,
-      delay: 100,
+      delay: 120,
       mirror: true,
       anchorPlacement: "bottom-bottom",
       offset: 160,
