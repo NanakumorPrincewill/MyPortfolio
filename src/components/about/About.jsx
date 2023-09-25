@@ -30,10 +30,7 @@ const About = () => {
               the job.
             </p>
           </div>
-          <div
-            data-aos="flip-right"
-            className="mt-8 ml-10 md:w-1/2 md:ml-10 md:mt-0 lg:ml-20"
-          >
+          <div className="mt-8 ml-10 md:w-1/2 md:ml-10 md:mt-0 lg:ml-20">
             <Image
               width={550}
               height={200}

@@ -130,7 +130,7 @@ export default function Contact() {
                 ></textarea>
               </div>
             </div>
-            <div data-aos="flip-up" class="p-2 w-full">
+            <div class="p-2 w-full">
               <motion.button
                 type="submit"
                 class={`flex mx-auto text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg transition ease-in duration-200 ${loading}`}
