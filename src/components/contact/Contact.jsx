@@ -133,13 +133,14 @@ export default function Contact() {
             <div class="p-2 w-full">
               <motion.button
                 type="submit"
-                class={`flex mx-auto text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg transition ease-in duration-200 ${loading}`}
+                class={`flex mx-auto text-black bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 hover:text-white rounded text-lg transition ease-in duration-200 ${loading}`}
                 whileTap={{
                   scale: 0.9,
                 }}
                 disabled={loading}
               >
-                Send <FaTelegramPlane size={25} />
+                <FaTelegramPlane size={25} className="mr-1" />
+                Send
               </motion.button>
             </div>
           </form>

@@ -10,7 +10,7 @@ const projects = [
     description:
       "This is a React full stack CRUD web application built for  users to create , delete, and update their profile details. It is also connected to a functioning database and hosted on netlify. With this program, I was able to understand how Nextjs app router and page routin works ",
     tectnology: "Technologies:",
-    tectnologyDescription: "Tailwind css, Nextjs13.4 and MongoDB",
+    tectnologyDescription: "Tailwind css, Nextjs and MongoDB",
     github: "https://github.com/NanakumorPrincewill/Nextjs_Crud_Application",
     link: "https://nexjs-crud-app.netlify.app",
   },
@@ -59,16 +59,16 @@ const ProjectsSection = () => {
                     <Link
                       href={project.github}
                       target="_blank"
-                      className="flex p-2 px-5 text-center text-white transition-transform bg-orange-500 rounded-full cursor-pointer hover:-translate-y-1"
+                      className="flex items-center px-8 py-2 text-lg text-black transition duration-200 ease-in bg-orange-500 border-0 rounded focus:outline-none hover:bg-orange-600 hover:text-white"
                     >
-                      Github <BsGithub className="mx-1 mt-1" />
+                      <BsGithub className="mx-1" /> Github
                     </Link>
                     <Link
                       href={project.link}
                       target="_blank"
-                      className="flex p-2 px-5 text-center text-white transition-transform bg-orange-500 rounded-full cursor-pointer hover:-translate-y-1"
+                      className="flex items-center px-8 py-2 text-lg text-black transition duration-200 ease-in bg-orange-500 border-0 rounded lex focus:outline-none hover:bg-orange-600 hover:text-white"
                     >
-                      Demo <BsArrowUpRightSquare className="mx-1 mt-1" />
+                      <BsArrowUpRightSquare className="mx-1 " /> Demo
                     </Link>
                   </div>
                 </div>

@@ -24,10 +24,10 @@ const About = () => {
               new technologies and I understand there is more than one way to
               accomplish a task. Though I am most proficient in building
               front-end applications using HTML, CSS, Tailwind CSS, Javascript
-              React and Nextjs 13.4. I am a quick learner and can pick up new
-              tech stacks as needed. I believe that being a great developer is
-              not using one specific language, but choosing the best tool for
-              the job.
+              React and Nextjs. I am a quick learner and can pick up new tech
+              stacks as needed. I believe that being a great developer is not
+              using one specific language, but choosing the best tool for the
+              job.
             </p>
           </div>
           <div className="mt-8 ml-10 md:w-1/2 md:ml-10 md:mt-0 lg:ml-20">
