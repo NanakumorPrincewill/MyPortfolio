@@ -9,112 +9,161 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   const [typeEffect] = useTypewriter({
-    words: ["<Princewill/>"],
+    words: ["<Princewill/>", "<Next.js/>", "<React/>"],
     loop: {},
     typeSpeed: 100,
     deleteSpeed: 150,
   });
 
   return (
-    <section id="hero" className="w-full h-screen text-center">
-      <div className="max-w-[1240px] w-full h-full mx-auto p-4 flex justify-center  items-center">
-        <div className="mt-28">
-          <motion.p
-            className="text-sm tracking-widest uppercase"
-            animate={{
-              x: 0,
-              opacity: 1,
-            }}
-            initial={{
-              x: "-100vw",
-              opacity: 0,
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 70,
-            }}
-          >
-            Connect with me
-          </motion.p>
-          <motion.h2
-            className="py-2 text-4xl"
-            animate={{
-              y: 0,
-              opacity: 1,
-            }}
-            initial={{
-              y: "-100vh",
-              opacity: 0,
-            }}
-            transition={{
-              type: "spring",
-              duration: 3,
-            }}
-          >
-            Hi, I&#39;m {""}
-            <span className="text-orange-500">
-              {typeEffect}
-              <Cursor />
-            </span>
-          </motion.h2>
-          <motion.h1
-            className="py-1 text-6xl font-bold text-gray-700"
-            animate={{
-              x: 0,
-              opacity: 2,
-            }}
-            initial={{
-              x: "100vw",
-              opacity: 0,
-            }}
-            transition={{
-              type: "spring",
-              duration: 3,
-            }}
-          >
-            A Front-End Web Developer
-            <hr className="w-10 h-1 mx-auto mt-2 bg-orange-500 border-0"></hr>
-          </motion.h1>
-          <p className="py-4 text-center text-gray-600 sm:max-w-[70%] m-auto">
-            I&#39;m focused on building responsive front-end web applications.
-          </p>
-          <div className=" flex items-center justify-between max-w-[330px] m-auto py-4">
-            <Link
-              href="https://www.linkedin.com/in/princewill-nanakumor-0a68b824a/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="p-4 duration-300 ease-in bg-orange-500 rounded-lg shadow-lg cursor-pointer shadow-gray-400 hover:scale-110 hover:text-white">
-                <FaLinkedinIn />
-              </div>
-            </Link>
-            <Link
-              href="https://github.com/NanakumorPrincewill"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="p-4 duration-300 ease-in bg-orange-500 rounded-lg shadow-lg cursor-pointer shadow-gray-400 hover:scale-110 hover:text-white ">
-                <FaGithub />
-              </div>
-            </Link>
+    <section
+      id="hero"
+      className="relative flex items-center justify-center min-h-screen pt-16 overflow-hidden sm:pt-20 bg-gradient-to-br from-bg-primary via-bg-secondary to-bg-accent"
+    >
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute w-40 h-40 rounded-full top-10 -left-20 sm:top-20 sm:-left-40 sm:w-80 sm:h-80 bg-secondary-indigo/10 blur-3xl animate-float"></div>
+        <div
+          className="absolute w-48 h-48 rounded-full bottom-10 -right-20 sm:bottom-20 sm:-right-40 sm:w-96 sm:h-96 bg-accent-emerald/10 blur-3xl animate-float"
+          style={{ animationDelay: "2s" }}
+        ></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] bg-gradient-to-r from-secondary-indigo/5 to-accent-emerald/5 rounded-full blur-3xl"></div>
+      </div>
 
-            <Link href="#skills">
-              <div className="p-4 duration-300 ease-in bg-orange-500 rounded-lg shadow-lg cursor-pointer shadow-gray-400 hover:scale-110 hover:text-white ">
-                <BsFillPersonLinesFill />
-              </div>
-            </Link>
-            <Link href="/#contact">
-              <div className="p-4 duration-300 ease-in bg-orange-500 rounded-lg shadow-lg cursor-pointer shadow-gray-400 hover:scale-110 hover:text-white ">
-                <AiOutlineMail />
-              </div>
-            </Link>
+      {/* Main Content Container */}
+      <div className="relative z-10 w-full max-w-6xl px-6 mx-auto sm:px-8 lg:px-12">
+        <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-5rem)] text-center">
+          <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
+            {/* Greeting */}
+            <motion.div
+              className="inline-flex items-center px-4 py-2 border border-gray-200 rounded-full sm:px-6 sm:py-3 label-medium text-secondary-indigo bg-white/80 backdrop-blur-sm shadow-soft"
+              animate={{ y: 0, opacity: 1 }}
+              initial={{ y: -50, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 100, delay: 0.2 }}
+            >
+              Welcome to my portfolio
+            </motion.div>
+
+            {/* Main Heading */}
+            <motion.div
+              className="space-y-2"
+              animate={{ y: 0, opacity: 1 }}
+              initial={{ y: 50, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 100, delay: 0.4 }}
+            >
+              <h1 className="heading-hero">
+                Hi, I&lsquo;m{" "}
+                <span className="relative">
+                  <span className="gradient-text">
+                    {typeEffect}
+                    <Cursor cursorColor="#4f46e5" />
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-secondary-indigo to-accent-emerald rounded-2xl blur-2xl opacity-20 -z-10"></div>
+                </span>
+              </h1>
+              <h2 className="heading-2 text-text-primary">Next.js Developer</h2>
+            </motion.div>
+
+            {/* Decorative Line */}
+            <motion.div
+              className="flex items-center justify-center space-x-2 sm:space-x-4"
+              animate={{ scaleX: 1, opacity: 1 }}
+              initial={{ scaleX: 0, opacity: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <div className="w-8 h-px sm:w-16 bg-gradient-to-r from-transparent to-secondary-indigo"></div>
+              <div className="w-2 h-2 rounded-full sm:w-3 sm:h-3 bg-secondary-indigo"></div>
+              <div className="w-8 h-px sm:w-16 bg-gradient-to-r from-secondary-indigo to-transparent"></div>
+            </motion.div>
+
+            {/* Description */}
+            <motion.p
+              className="max-w-2xl px-4 mx-auto body-hero"
+              animate={{ y: 0, opacity: 1 }}
+              initial={{ y: 30, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 100, delay: 0.8 }}
+            >
+              I build modern web applications with Next.js and React.
+              Specializing in creating seamless user experiences with clean
+              code, responsive design, and cutting-edge web technologies.
+            </motion.p>
+            {/* CTA Buttons */}
+            <motion.div
+              className="flex flex-col items-center justify-center gap-4 px-4 sm:gap-6 sm:flex-row"
+              animate={{ y: 0, opacity: 1 }}
+              initial={{ y: 30, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 100, delay: 1.0 }}
+            >
+              <Link href="#projects" className="w-full btn-primary sm:w-auto">
+                View My Projects
+              </Link>
+              <Link href="#contact" className="w-full btn-secondary sm:w-auto">
+                Let&lsquo;s Connect
+              </Link>
+            </motion.div>
+
+            {/* Social Links */}
+            <motion.div
+              className="flex items-center justify-center gap-4 sm:gap-6"
+              animate={{ y: 0, opacity: 1 }}
+              initial={{ y: 30, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 100, delay: 1.2 }}
+            >
+              <Link
+                href="https://www.linkedin.com/in/princewill-nanakumor-0a68b824a/"
+                target="_blank"
+                rel="noreferrer"
+                className="group"
+              >
+                <div className="flex items-center justify-center w-12 h-12 text-white transition-all duration-300 ease-out sm:w-14 sm:h-14 shadow-soft bg-secondary-indigo rounded-2xl hover:shadow-glow hover:scale-110 hover:-translate-y-1">
+                  <FaLinkedinIn className="text-lg sm:text-xl" />
+                </div>
+              </Link>
+
+              <Link
+                href="https://github.com/NanakumorPrincewill"
+                target="_blank"
+                rel="noreferrer"
+                className="group"
+              >
+                <div className="flex items-center justify-center w-12 h-12 text-white transition-all duration-300 ease-out sm:w-14 sm:h-14 shadow-soft bg-primary-slate rounded-2xl hover:shadow-medium hover:scale-110 hover:-translate-y-1">
+                  <FaGithub className="text-lg sm:text-xl" />
+                </div>
+              </Link>
+
+              <Link href="#skills" className="group">
+                <div className="flex items-center justify-center w-12 h-12 text-white transition-all duration-300 ease-out sm:w-14 sm:h-14 shadow-soft bg-accent-emerald rounded-2xl hover:shadow-glow-emerald hover:scale-110 hover:-translate-y-1">
+                  <BsFillPersonLinesFill className="text-lg sm:text-xl" />
+                </div>
+              </Link>
+
+              <Link href="#contact" className="group">
+                <div className="flex items-center justify-center w-12 h-12 text-white transition-all duration-300 ease-out sm:w-14 sm:h-14 shadow-soft bg-gradient-to-r from-secondary-indigo to-accent-emerald rounded-2xl hover:shadow-large hover:scale-110 hover:-translate-y-1">
+                  <AiOutlineMail className="text-lg sm:text-xl" />
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Scroll Indicator */}
+            <motion.div
+              className="py-4"
+              animate={{ y: 0, opacity: 1 }}
+              initial={{ y: 30, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 100, delay: 1.4 }}
+            >
+              <Link
+                href="#about"
+                className="inline-flex flex-col items-center group"
+              >
+                <span className="mb-2 label-medium text-text-muted">
+                  Scroll to explore
+                </span>
+                <div className="flex items-center justify-center w-10 h-10 transition-all duration-300 border-2 border-gray-300 rounded-full sm:w-12 sm:h-12 group-hover:border-secondary-indigo group-hover:shadow-glow">
+                  <HiArrowDown className="text-lg transition-all duration-300 sm:text-xl text-text-muted group-hover:text-secondary-indigo animate-bounce" />
+                </div>
+              </Link>
+            </motion.div>
           </div>
-          <Link href="/#about">
-            <HiArrowDown
-              className="container items-center mx-auto mt-32 animate-bounce"
-              size={32}
-            />
-          </Link>
         </div>
       </div>
     </section>

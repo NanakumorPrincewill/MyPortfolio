@@ -1,3 +1,228 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* CSS Variables for Modern Design System */
+:root {
+  --primary-slate: #0f172a;
+  --secondary-indigo: #4f46e5;
+  --accent-emerald: #10b981;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-accent: #f1f5f9;
+  --gradient-from: #4f46e5;
+  --gradient-to: #10b981;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Modern Typography Scale */
+.heading-hero {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  background: linear-gradient(
+    135deg,
+    var(--primary-slate) 0%,
+    var(--secondary-indigo) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heading-1 {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.heading-2 {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+
+.heading-3 {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
+.heading-4 {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.875rem);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+}
+
+.body-hero {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.body-large {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.body-medium {
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.body-small {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.label-large {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+.label-medium {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.code-text {
+  font-family: var(--font-jetbrains), Consolas, monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Modern Component Styles */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 font-display font-semibold text-white transition-all duration-300 ease-out rounded-2xl bg-secondary-indigo hover:bg-indigo-600 hover:shadow-glow hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-indigo-200;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 font-display font-semibold transition-all duration-300 ease-out border-2 rounded-2xl text-secondary-indigo bg-transparent border-secondary-indigo hover:bg-secondary-indigo hover:text-white hover:shadow-glow hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-indigo-200;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center px-8 py-4 font-display font-semibold text-white transition-all duration-300 ease-out rounded-2xl bg-accent-emerald hover:bg-emerald-600 hover:shadow-glow-emerald hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-emerald-200;
+  }
+
+  .card-modern {
+    @apply p-8 transition-all duration-500 ease-out bg-white border border-gray-200 shadow-soft rounded-3xl hover:shadow-medium hover:border-gray-300 hover:-translate-y-1;
+  }
+
+  .card-gradient {
+    @apply p-8 transition-all duration-500 ease-out border border-gray-200 bg-gradient-to-br from-white to-gray-50 shadow-soft rounded-3xl hover:shadow-large hover:border-gray-300 hover:-translate-y-2;
+  }
+
+  .glass-card {
+    @apply p-8 transition-all duration-500 ease-out border backdrop-blur-md bg-white/80 border-white/20 shadow-soft rounded-3xl hover:shadow-medium hover:bg-white/90;
+  }
+
+  .section-padding {
+    @apply px-6 py-24 lg:py-32;
+  }
+
+  .container-custom {
+    @apply mx-auto max-w-7xl;
+  }
+
+  .gradient-text {
+    @apply text-transparent bg-gradient-to-r from-secondary-indigo to-accent-emerald bg-clip-text;
+  }
+
+  .gradient-border {
+    @apply relative overflow-hidden rounded-3xl;
+  }
+
+  .gradient-border::before {
+    content: "";
+    @apply absolute inset-0 p-[2px] bg-gradient-to-r from-secondary-indigo to-accent-emerald rounded-3xl;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+  }
+}
+
+/* Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Focus Styles */
+*:focus-visible {
+  outline: 2px solid var(--secondary-indigo);
+  outline-offset: 2px;
+}
+
+/* Selection Styles */
+::selection {
+  background-color: var(--secondary-indigo);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: var(--secondary-indigo);
+  color: white;
+}

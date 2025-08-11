@@ -11,17 +11,18 @@ import { useEffect } from "react";
 export default function Home() {
   useEffect(() => {
     AOS.init({
-      easing: "ease-out-back",
-      duration: 1200,
-      delay: 120,
+      easing: "ease-out-cubic",
+      duration: 800,
+      delay: 100,
       mirror: true,
-      anchorPlacement: "bottom-bottom",
-      offset: 160,
+      anchorPlacement: "top-bottom",
+      offset: 120,
     });
     AOS.refresh();
   }, []);
+
   return (
-    <main>
+    <main className="bg-bg-primary">
       <Hero />
       <About />
       <Skills />

@@ -2,80 +2,128 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const projects = [
   {
-    image: "/crudapp.png",
-    name: "Crud Application",
+    image: "/zodashield.png",
+    name: "Zodashield CRM",
     description:
-      "This is a React full stack CRUD web application built for  users to create , delete, and update their profile details. It is also connected to a functioning database and hosted on netlify. With this program, I was able to understand how Nextjs app router and page routin works ",
-    tectnology: "Technologies:",
-    tectnologyDescription: "Tailwind css, Nextjs and MongoDB",
-    github: "https://github.com/NanakumorPrincewill/Nextjs_Crud_Application",
-    link: "https://nexjs-crud-app.netlify.app",
+      "A modern CRM platform designed for seamless Excel/CSV lead management, powerful analytics, and team collaboration. Built as a full-stack web application with advanced importing, role-based access, and a sleek, responsive interface.",
+    technology:
+      "Next.js, MongoDB, Tailwind CSS, TypeScript, NextAuth.js, React Query, Zustand",
+    github: "#",
+    link: "https://zodashield.com",
+    year: "2025",
+  },
+  {
+    image: "/crudapp.png",
+    name: "E-Commerce Platform",
+    description:
+      "Modern e-commerce solution with payment integration, user authentication, and real-time inventory management.",
+    technology: "React, Node.js, Stripe, PostgreSQL",
+    github: "#",
+    link: "#",
+    year: "2024",
   },
 ];
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="px-2 py-10 scroll-mt-20">
-      <div>
-        <h1
-          data-aos="zoom-in-up"
-          className="mb-10 text-4xl font-bold tracking-widest text-center text-gray-700 md:text-5xl lg:text-6xl"
-        >
-          Projects
-          <hr className="w-10 h-1 mx-auto mt-2 bg-orange-500 border-0"></hr>
-        </h1>
+    <section
+      id="projects"
+      className="min-h-[80vh] w-full flex items-center bg-bg-primary scroll-mt-20 relative overflow-hidden"
+    >
+      <div className="absolute inset-0">
+        <div className="absolute w-64 h-64 -translate-x-1/2 -translate-y-1/2 rounded-full top-1/2 left-1/2 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-gradient-to-r from-secondary-indigo/5 to-accent-emerald/5 blur-3xl"></div>
       </div>
-      <div className="container flex flex-col px-2 mx-auto mb-6 ">
-        {projects.map((project) => {
-          return (
-            <div key={project.id}>
-              <div className="flex flex-col md:flex-row md:space-x-12 ">
-                <div className="mt-6 border-t-4 border-orange-500 rounded-xl md:w-1/2">
-                  <Link href={project.link} target="_blank">
-                    <Image
-                      src={project.image}
-                      alt="image"
-                      width={600}
-                      height={400}
-                      className="duration-500 ease-in shadow-xl rounded-xl hover:opacity-80"
-                    />
-                  </Link>
+
+      <div className="relative z-10 w-full max-w-6xl px-6 mx-auto sm:px-8 lg:px-12">
+        <div className="py-12 sm:py-16">
+          <motion.div
+            className="mb-8 text-center sm:mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="mb-4 heading-2 text-text-primary">
+              Featured Projects
+            </h2>
+            <div className="flex items-center justify-center space-x-2 sm:space-x-4">
+              <div className="w-8 h-px sm:w-16 bg-gradient-to-r from-transparent to-secondary-indigo"></div>
+              <div className="w-2 h-2 rounded-full sm:w-3 sm:h-3 bg-secondary-indigo"></div>
+              <div className="w-8 h-px sm:w-16 bg-gradient-to-r from-secondary-indigo to-transparent"></div>
+            </div>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto space-y-8 sm:space-y-12">
+            {projects.map((project, index) => (
+              <motion.div
+                key={project.name}
+                className={`flex flex-col ${
+                  index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                } items-center gap-6 sm:gap-8`}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-full lg:w-1/2">
+                  <div className="relative group">
+                    <div className="absolute inset-0 transition-all duration-500 bg-gradient-to-br from-secondary-indigo/10 to-accent-emerald/10 rounded-2xl blur-xl group-hover:blur-2xl"></div>
+                    <div className="relative overflow-hidden rounded-2xl shadow-large">
+                      <Image
+                        src={project.image}
+                        alt={project.name}
+                        width={500}
+                        height={300}
+                        className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/20 to-transparent group-hover:opacity-100"></div>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-8 md:w-1/2">
-                  <h2 className="mb-1 text-2xl font-bold">{project.name}</h2>
-                  <p className="mb-4 text-xl leading-7 text-neutral-600 dark:text-neutral-400">
+
+                <div className="w-full space-y-4 lg:w-1/2">
+                  <div className="flex flex-col space-y-2 sm:flex-row sm:items-center sm:space-y-0 sm:space-x-4">
+                    <span className="px-3 py-1 text-xs font-bold text-white rounded-full sm:px-4 sm:py-2 sm:text-sm bg-secondary-indigo w-fit">
+                      {project.year}
+                    </span>
+                    <h3 className="heading-3 text-text-primary">
+                      {project.name}
+                    </h3>
+                  </div>
+                  <p className="body-medium text-text-secondary">
                     {project.description}
                   </p>
-                  <h2 className="mb-0 text-2xl font-meduim">
-                    {project.tectnology}
-                  </h2>
-                  <p className="mb-4 text-xl leading-7 text-neutral-600 dark:text-neutral-400">
-                    {project.tectnologyDescription}
+                  <p className="text-xs font-medium sm:text-sm text-secondary-indigo">
+                    {project.technology}
                   </p>
-                  <div className="flex flex-row space-x-4 align-bottom">
+
+                  <div className="flex flex-col gap-3 pt-4 sm:flex-row">
                     <Link
                       href={project.github}
                       target="_blank"
-                      className="flex items-center px-8 py-2 text-lg text-black transition duration-200 ease-in bg-orange-500 border-0 rounded focus:outline-none hover:bg-orange-600 hover:text-white"
+                      className="flex items-center justify-center space-x-2 btn-primary"
                     >
-                      <BsGithub className="mx-1" /> Github
+                      <BsGithub className="text-lg" />
+                      <span>View Code</span>
                     </Link>
                     <Link
                       href={project.link}
                       target="_blank"
-                      className="flex items-center px-8 py-2 text-lg text-black transition duration-200 ease-in bg-orange-500 border-0 rounded lex focus:outline-none hover:bg-orange-600 hover:text-white"
+                      className="flex items-center justify-center space-x-2 btn-secondary"
                     >
-                      <BsArrowUpRightSquare className="mx-1 " /> Demo
+                      <BsArrowUpRightSquare className="text-lg" />
+                      <span>Live Demo</span>
                     </Link>
                   </div>
                 </div>
-              </div>
-            </div>
-          );
-        })}
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
