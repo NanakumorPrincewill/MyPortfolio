@@ -18,13 +18,12 @@ const projects = [
   },
   {
     image: "/crudapp.png",
-    name: "E-Commerce Platform",
-    description:
-      "Modern e-commerce solution with payment integration, user authentication, and real-time inventory management.",
-    technology: "React, Node.js, Stripe, PostgreSQL",
+    name: "my crud application",
+    description: "Learnign how cryp application works.",
+    technology: "React, Nodemailer, nextjs, tailwind, react-toast",
     github: "#",
     link: "#",
-    year: "2024",
+    year: "2022",
   },
 ];
 
