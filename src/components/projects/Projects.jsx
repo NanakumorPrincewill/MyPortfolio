@@ -30,8 +30,8 @@ const projects = [
     name: "My portfolio",
     description: "Built my porfolio",
     technology: "React, Nodemailer, nextjs, tailwind, react-toast",
-    github: "https://github.com/NanakumorPrincewill/MyPortfolio",
-    link: "https://princewill-nanakumor-portfolio.vercel.app/#about",
+    github: "https://github.com/Princewill-Nanakumor/MyPortfolio",
+    link: "http://www.princewillnanakumor.com/",
     year: "2022",
   },
 ];

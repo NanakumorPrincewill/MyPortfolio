@@ -130,7 +130,7 @@ export default function RootLayout({ children }) {
                 "Crafting modern web experiences with clean code and innovative design",
               url: "http://www.princewillnanakumor.com/",
               sameAs: [
-                "https://github.com/NanakumorPrincewill",
+                "https://github.com/Princewill-Nanakumor",
                 "https://www.linkedin.com/in/princewill-nanakumor-0a68b824a/",
                 // "https://twitter.com/your-twitter",
               ],
