@@ -48,20 +48,30 @@ const Navbar = () => {
         </Link>
         <div>
           <ul className="items-center hidden space-x-8 md:flex">
-            <li className="text-sm font-medium tracking-wide uppercase transition-colors duration-300 hover:text-secondary-indigo">
-              <Link href="/">Home</Link>
+            <li className="font-medium tracking-wide transition-colors duration-300 hover:text-secondary-indigo">
+              <Link href="/" className="label-large">
+                Home
+              </Link>
             </li>
-            <li className="text-sm font-medium tracking-wide uppercase transition-colors duration-300 hover:text-secondary-indigo">
-              <Link href="/#about">About</Link>
+            <li className="font-medium tracking-wide transition-colors duration-300 hover:text-secondary-indigo">
+              <Link href="/#about" className="label-large">
+                About
+              </Link>
             </li>
-            <li className="text-sm font-medium tracking-wide uppercase transition-colors duration-300 hover:text-secondary-indigo">
-              <Link href="/#skills">Skills</Link>
+            <li className="font-medium tracking-wide transition-colors duration-300 hover:text-secondary-indigo">
+              <Link href="/#skills" className="label-large">
+                Skills
+              </Link>
             </li>
-            <li className="text-sm font-medium tracking-wide uppercase transition-colors duration-300 hover:text-secondary-indigo">
-              <Link href="/#projects">Projects</Link>
+            <li className="font-medium tracking-wide transition-colors duration-300 hover:text-secondary-indigo">
+              <Link href="/#projects" className="label-large">
+                Projects
+              </Link>
             </li>
-            <li className="text-sm font-medium tracking-wide uppercase transition-colors duration-300 hover:text-secondary-indigo">
-              <Link href="/#contact">Contact</Link>
+            <li className="font-medium tracking-wide transition-colors duration-300 hover:text-secondary-indigo">
+              <Link href="/#contact" className="label-large">
+                Contact
+              </Link>
             </li>
           </ul>
           {/* Hamburger Icon */}
@@ -117,48 +127,48 @@ const Navbar = () => {
               <Link href="/">
                 <li
                   onClick={() => setNav(false)}
-                  className="px-4 py-3 text-sm font-medium tracking-wide uppercase transition-all duration-300 rounded-lg hover:text-secondary-indigo hover:bg-gray-50"
+                  className="px-4 py-3 font-medium tracking-wide transition-all duration-300 rounded-lg hover:text-secondary-indigo hover:bg-gray-50"
                 >
-                  Home
+                  <span className="label-large">Home</span>
                 </li>
               </Link>
               <Link href="/#about">
                 <li
                   onClick={() => setNav(false)}
-                  className="px-4 py-3 text-sm font-medium tracking-wide uppercase transition-all duration-300 rounded-lg hover:text-secondary-indigo hover:bg-gray-50"
+                  className="px-4 py-3 font-medium tracking-wide transition-all duration-300 rounded-lg hover:text-secondary-indigo hover:bg-gray-50"
                 >
-                  About
+                  <span className="label-large">About</span>
                 </li>
               </Link>
               <Link href="/#skills">
                 <li
                   onClick={() => setNav(false)}
-                  className="px-4 py-3 text-sm font-medium tracking-wide uppercase transition-all duration-300 rounded-lg hover:text-secondary-indigo hover:bg-gray-50"
+                  className="px-4 py-3 font-medium tracking-wide transition-all duration-300 rounded-lg hover:text-secondary-indigo hover:bg-gray-50"
                 >
-                  Skills
+                  <span className="label-large">Skills</span>
                 </li>
               </Link>
               <Link href="/#projects">
                 <li
                   onClick={() => setNav(false)}
-                  className="px-4 py-3 text-sm font-medium tracking-wide uppercase transition-all duration-300 rounded-lg hover:text-secondary-indigo hover:bg-gray-50"
+                  className="px-4 py-3 font-medium tracking-wide transition-all duration-300 rounded-lg hover:text-secondary-indigo hover:bg-gray-50"
                 >
-                  Projects
+                  <span className="label-large">Projects</span>
                 </li>
               </Link>
               <Link href="/#contact">
                 <li
                   onClick={() => setNav(false)}
-                  className="px-4 py-3 text-sm font-medium tracking-wide uppercase transition-all duration-300 rounded-lg hover:text-secondary-indigo hover:bg-gray-50"
+                  className="px-4 py-3 font-medium tracking-wide transition-all duration-300 rounded-lg hover:text-secondary-indigo hover:bg-gray-50"
                 >
-                  Contact
+                  <span className="label-large">Contact</span>
                 </li>
               </Link>
             </ul>
 
             <div className="pt-12 mt-8 border-t border-gray-200">
-              <p className="mb-6 text-sm font-medium tracking-widest uppercase text-text-secondary">
-                Connect with me
+              <p className="mb-6 font-medium tracking-widest uppercase text-text-secondary">
+                <span className="label-large">Connect with me</span>
               </p>
               <div className="flex items-center justify-between w-full max-w-xs">
                 <Link

@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   const [typeEffect] = useTypewriter({
-    words: ["<Princewill/>", "<Next.js/>", "<React/>"],
+    words: ["<Princewill/>", "<React/>", "<Typescript/>"],
     loop: {},
     typeSpeed: 100,
     deleteSpeed: 150,
@@ -52,8 +52,19 @@ const Hero = () => {
               transition={{ type: "spring", stiffness: 100, delay: 0.4 }}
             >
               <h1 className="heading-hero">
-                Hi, I&lsquo;m{" "}
-                <span className="relative">
+                {/* Mobile: Split into two lines */}
+                <span className="block md:hidden">Hi, I&lsquo;m</span>
+                <span className="relative block md:hidden">
+                  <span className="gradient-text">
+                    {typeEffect}
+                    <Cursor cursorColor="#4f46e5" />
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-secondary-indigo to-accent-emerald rounded-2xl blur-2xl opacity-20 -z-10"></div>
+                </span>
+
+                {/* Desktop: Keep on one line */}
+                <span className="hidden md:inline">Hi, I&lsquo;m </span>
+                <span className="relative hidden md:inline">
                   <span className="gradient-text">
                     {typeEffect}
                     <Cursor cursorColor="#4f46e5" />
@@ -87,6 +98,7 @@ const Hero = () => {
               Specializing in creating seamless user experiences with clean
               code, responsive design, and cutting-edge web technologies.
             </motion.p>
+
             {/* CTA Buttons */}
             <motion.div
               className="flex flex-col items-center justify-center gap-4 px-4 sm:gap-6 sm:flex-row"

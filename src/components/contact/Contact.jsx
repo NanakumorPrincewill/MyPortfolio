@@ -150,7 +150,7 @@ export default function Contact() {
                 <h3 className="mb-4 sm:mb-6 heading-3 text-text-primary">
                   Get In Touch
                 </h3>
-                <p className="mb-6 sm:mb-8 body-large text-text-secondary">
+                <p className="mb-4 sm:mb-8 body-large text-text-secondary">
                   Ready to start a project or have a question? I&#39;d love to
                   hear from you. Let&#39;s discuss how we can work together to
                   bring your ideas to life.
@@ -158,9 +158,9 @@ export default function Contact() {
               </div>
 
               {/* Contact Details */}
-              <div className="space-y-4 sm:space-y-6">
+              <div className="space-y-2 sm:space-y-6">
                 <div className="flex items-center space-x-3 sm:space-x-4">
-                  <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-secondary-indigo/10 rounded-xl">
+                  {/* <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-secondary-indigo/10 rounded-xl">
                     <HiMail className="text-lg sm:text-xl text-secondary-indigo" />
                   </div>
                   <div>
@@ -168,7 +168,7 @@ export default function Contact() {
                     <p className="text-sm sm:text-base text-text-secondary">
                       nanakumorprincewill@gmail.com
                     </p>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="flex items-center space-x-3 sm:space-x-4">

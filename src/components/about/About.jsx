@@ -184,40 +184,6 @@ const About = () => {
                   </div>
                 </div>
               </div>
-
-              {/* Technical Skills */}
-              <div className="pt-4">
-                <h4 className="mb-3 text-sm font-semibold text-text-primary">
-                  Core Technologies
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 text-xs font-medium rounded-full text-secondary-indigo bg-secondary-indigo/10">
-                    Next.js 14
-                  </span>
-                  <span className="px-3 py-1 text-xs font-medium rounded-full text-secondary-indigo bg-secondary-indigo/10">
-                    React 18
-                  </span>
-                  <span className="px-3 py-1 text-xs font-medium rounded-full text-secondary-indigo bg-secondary-indigo/10">
-                    TypeScript
-                  </span>
-                  <span className="px-3 py-1 text-xs font-medium rounded-full text-secondary-indigo bg-secondary-indigo/10">
-                    Tailwind CSS
-                  </span>
-                  <span className="px-3 py-1 text-xs font-medium rounded-full text-secondary-indigo bg-secondary-indigo/10">
-                    MongoDB
-                  </span>
-                  <span className="px-3 py-1 text-xs font-medium rounded-full text-secondary-indigo bg-secondary-indigo/10">
-                    Node.js
-                  </span>
-                </div>
-              </div>
-
-              {/* CTA Button */}
-              <div className="pt-4">
-                <Link href="#projects" className="btn-primary">
-                  View My Projects
-                </Link>
-              </div>
             </motion.div>
 
             {/* Image Section */}

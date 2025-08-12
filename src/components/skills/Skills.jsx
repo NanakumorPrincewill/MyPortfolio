@@ -16,6 +16,8 @@ const skills = [
   { image: "/mongo.png", description: "MongoDB", category: "Database" },
   { image: "/github1.png", description: "Github", category: "Tools" },
   { image: "/git.png", description: "Git", category: "Tools" },
+  { image: "/cursor-logo.png", description: "Cursor Ai", category: "Tools" },
+  { image: "/vercel.png", description: "Vercel", category: "Tools" },
 ];
 
 const Skills = () => {
