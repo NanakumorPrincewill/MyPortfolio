@@ -26,7 +26,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Princewill Nanakumor | Web Developer",
+  title: "Princewill Nanakumor | Nextjs Web Developer",
   description:
     "Crafting modern web experiences with clean code and innovative design. Expert in React, Next.js, TypeScript, and modern web technologies.",
   keywords: [
@@ -66,7 +66,7 @@ export const metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Princewill Nanakumor | Web Developer",
+    title: "Princewill Nanakumor | Nextjs Web Developer",
     description:
       "Crafting modern web experiences with clean code and innovative design. Expert in React, Next.js, TypeScript, and modern web technologies.",
     url: "http://www.princewillnanakumor.com/",
