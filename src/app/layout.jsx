@@ -61,7 +61,7 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("http://www.princewillnanakumor.com/"),
+  metadataBase: new URL("http://princewillnanakumor.com/"),
   alternates: {
     canonical: "/",
   },
@@ -69,7 +69,7 @@ export const metadata = {
     title: "Princewill Nanakumor | Nextjs Web Developer",
     description:
       "Crafting modern web experiences with clean code and innovative design. Expert in React, Next.js, TypeScript, and modern web technologies.",
-    url: "http://www.princewillnanakumor.com/",
+    url: "http://princewillnanakumor.com/",
     siteName: "Princewill Portfolio",
     images: [
       {
@@ -87,7 +87,7 @@ export const metadata = {
     title: "Princewill | Web Developer",
     description:
       "Crafting modern web experiences with clean code and innovative design. Expert in React, Next.js, TypeScript, and modern web technologies.",
-    images: ["/aboutme.gif"],
+    images: ["/myPhoto.jpg"],
   },
   robots: {
     index: true,
@@ -128,10 +128,10 @@ export default function RootLayout({ children }) {
               jobTitle: "Frontend Developer",
               description:
                 "Crafting modern web experiences with clean code and innovative design",
-              url: "http://www.princewillnanakumor.com/",
+              url: "http://princewillnanakumor.com/",
               sameAs: [
                 "https://github.com/Princewill-Nanakumor",
-                "https://www.linkedin.com/in/princewill-nanakumor-0a68b824a/",
+                "https://linkedin.com/in/princewill-nanakumor-0a68b824a/",
                 // "https://twitter.com/your-twitter",
               ],
               knowsAbout: [
