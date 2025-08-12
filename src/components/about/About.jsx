@@ -204,7 +204,7 @@ const About = () => {
                     height={600}
                     className="object-cover object-center w-full h-auto transition-transform duration-700 hover:scale-105"
                     alt="Princewill - Next.js Developer"
-                    src="/aboutme.gif"
+                    src="/try.jpg"
                   />
 
                   {/* Overlay Gradient */}
