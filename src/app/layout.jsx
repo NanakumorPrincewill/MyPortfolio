@@ -32,7 +32,9 @@ export const metadata = {
   keywords: [
     "Nanakumor Princewill Wosowei",
     "Nanakumor Princewill",
+    "nanakumor princewill",
     "Princewill Nanakumor",
+    "princewill nanakumor",
     "Frontend Developer",
     "React Developer",
     "Next.js Developer",
