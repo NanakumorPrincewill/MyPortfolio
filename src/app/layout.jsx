@@ -26,11 +26,12 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Nanakumor Princewill | Web Developer",
+  title: "Princewill Nanakumor | Web Developer",
   description:
     "Crafting modern web experiences with clean code and innovative design. Expert in React, Next.js, TypeScript, and modern web technologies.",
   keywords: [
     "Nanakumor Princewill Wosowei",
+    "Nanakumor Princewill",
     "Princewill Nanakumor",
     "Frontend Developer",
     "React Developer",
@@ -41,6 +42,7 @@ export const metadata = {
     "Full Stack Developer",
     "React.js",
     "Next.js",
+    "Tailwind css",
     "TypeScript",
     "JavaScript",
     "Web Development",
@@ -59,22 +61,22 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://princewill-nanakumor-portfolio.vercel.app"),
+  metadataBase: new URL("http://www.princewillnanakumor.com/"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Nanakumor Princewill | Web Developer",
+    title: "Princewill Nanakumor | Web Developer",
     description:
       "Crafting modern web experiences with clean code and innovative design. Expert in React, Next.js, TypeScript, and modern web technologies.",
-    url: "https://princewill-nanakumor-portfolio.vercel.app",
+    url: "http://www.princewillnanakumor.com/",
     siteName: "Princewill Portfolio",
     images: [
       {
         url: "/aboutme.gif",
         width: 1200,
         height: 630,
-        alt: "Princewill - Frontend Developer",
+        alt: "Princewill - Web Developer",
       },
     ],
     locale: "en_US",
@@ -82,7 +84,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Princewill | Frontend Developer",
+    title: "Princewill | Web Developer",
     description:
       "Crafting modern web experiences with clean code and innovative design. Expert in React, Next.js, TypeScript, and modern web technologies.",
     images: ["/aboutme.gif"],
@@ -98,11 +100,12 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
-  // verification: {
-  //   google: "your-google-verification-code", // Add your Google Search Console verification code
-  //   // yandex: "your-yandex-verification-code",
-  //   // yahoo: "your-yahoo-verification-code",
-  // },
+  verification: {
+    google:
+      "google-site-verification=PkMRZNBrIxjh7weOqOBJb9mTtrqlvjKssfVEFfsSws0",
+    // yandex: "your-yandex-verification-code",
+    // yahoo: "your-yahoo-verification-code",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -125,11 +128,11 @@ export default function RootLayout({ children }) {
               jobTitle: "Frontend Developer",
               description:
                 "Crafting modern web experiences with clean code and innovative design",
-              url: "https://your-domain.com", // Replace with your actual domain
+              url: "http://www.princewillnanakumor.com/",
               sameAs: [
-                "https://github.com/your-github", // Replace with your GitHub
-                "https://linkedin.com/in/your-linkedin", // Replace with your LinkedIn
-                "https://twitter.com/your-twitter", // Replace with your Twitter
+                "https://github.com/NanakumorPrincewill",
+                "https://www.linkedin.com/in/princewill-nanakumor-0a68b824a/",
+                // "https://twitter.com/your-twitter",
               ],
               knowsAbout: [
                 "React",
@@ -138,7 +141,6 @@ export default function RootLayout({ children }) {
                 "JavaScript",
                 "Web Development",
                 "Frontend Development",
-                "UI/UX Design",
               ],
               worksFor: {
                 "@type": "Organization",
