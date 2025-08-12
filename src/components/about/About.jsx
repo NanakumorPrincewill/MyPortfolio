@@ -45,27 +45,26 @@ const About = () => {
 
                 <div className="space-y-4 body-medium">
                   <p>
-                    I&apos;m a passionate Next.js developer with a deep love for
-                    creating modern, performant web applications. With expertise
-                    in Tailwind CSS, React, TypeScript, MongoDB and the latest
-                    web technologies, I transform ideas into seamless digital
-                    experiences that users love.
+                    I&apos;m a Next.js developer specializing in building fast,
+                    scalable web applications that deliver exceptional user
+                    experiences. With expertise spanning frontend development
+                    and backend API integration, I create complete,
+                    production-ready solutions that drive business results.
                   </p>
 
                   <p>
-                    My journey in web development started with a fascination for
-                    how websites work, which evolved into a professional career
-                    building scalable applications. I specialize in server-side
-                    rendering, static site generation, and creating
-                    lightning-fast user interfaces that deliver exceptional user
-                    experiences.
+                    I leverage modern technologies including React, TypeScript,
+                    Tailwind CSS, and MongoDB, while utilizing Next.js&#39;s
+                    advanced capabilities—server-side rendering, static site
+                    generation, and API routes—to optimize application
+                    performance, SEO, and scalability.
                   </p>
 
                   <p>
-                    I believe in writing clean, maintainable code and staying
-                    up-to-date with the latest industry best practices. I
-                    approach each project with creativity, attention to detail,
-                    and a focus on performance.
+                    Whether building from scratch or optimizing existing
+                    applications, I focus on delivering products that are both
+                    visually stunning and technically robust, leaving a lasting
+                    impression on users and clients alike.
                   </p>
                 </div>
               </div>
