@@ -75,7 +75,7 @@ export const metadata = {
     siteName: "Princewill Portfolio",
     images: [
       {
-        url: "/myPhoto.jpg",
+        url: "https://princewillnanakumor.com/myPhoto.jpg",
         width: 1200,
         height: 630,
         alt: "Princewill - Web Developer",
