@@ -66,6 +66,11 @@ const About = () => {
                     visually stunning and technically robust, leaving a lasting
                     impression on users and clients alike.
                   </p>
+
+                  <p>
+                    The real power comes when combining these new Ai tools with
+                    existing Technologies that you already know and love
+                  </p>
                 </div>
               </div>
 
