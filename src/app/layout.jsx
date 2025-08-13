@@ -75,7 +75,7 @@ export const metadata = {
     siteName: "Princewill Portfolio",
     images: [
       {
-        url: "/aboutme.gif",
+        url: "/myPhoto.jpg",
         width: 1200,
         height: 630,
         alt: "Princewill - Web Developer",
@@ -118,6 +118,17 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#0f172a" />
         <meta name="color-scheme" content="dark light" />
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="//favicon.ico" />
+        <link rel="manifest" href="/site.webmanifest" />
 
         {/* Structured Data for better search results */}
         <script
