@@ -28,7 +28,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata = {
   title: "Princewill Nanakumor | Nextjs Web Developer",
   description:
-    "Crafting modern web experiences with clean code and innovative design. Expert in React, Next.js, TypeScript, and modern web technologies.",
+    "Building sleek, responsive, and high-performance web applications with React, Next.js, Tailwind CSS and TypeScript ",
   keywords: [
     "Nanakumor Princewill Wosowei",
     "Nanakumor Princewill",
@@ -70,7 +70,7 @@ export const metadata = {
   openGraph: {
     title: "Princewill Nanakumor | Nextjs Web Developer",
     description:
-      "Crafting modern web experiences with clean code and innovative design. Expert in React, Next.js, TypeScript, and modern web technologies.",
+      "Building sleek, responsive, and high-performance web applications with React, Next.js, Tailwind CSS and TypeScript",
     url: "http://princewillnanakumor.com/",
     siteName: "Princewill Portfolio",
     images: [
@@ -88,7 +88,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Princewill | Web Developer",
     description:
-      "Crafting modern web experiences with clean code and innovative design. Expert in React, Next.js, TypeScript, and modern web technologies.",
+      "Building sleek, responsive, and high-performance web applications with React, Next.js, Tailwind CSS and TypeScript",
     images: ["/myPhoto.jpg"],
   },
   robots: {
