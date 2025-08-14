@@ -318,16 +318,6 @@ const About = () => {
                             alt={image.alt}
                             src={image.src}
                           />
-
-                          {/* Image Title Overlay */}
-                          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
-                            <h4 className="text-lg font-semibold text-white">
-                              {image.alt}
-                            </h4>
-                          </div>
-
-                          {/* Overlay Gradient */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                         </div>
                       </div>
                     ))}
