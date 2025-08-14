@@ -193,7 +193,7 @@ export default function Contact() {
                 </h4>
                 <div className="flex space-x-3 sm:space-x-4">
                   <Link
-                    href="https://github.com/NanakumorPrincewill"
+                    href="https://github.com/Princewill-Nanakumor"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center text-white transition-all duration-300 w-9 h-9 sm:w-10 sm:h-10 bg-primary-slate rounded-xl hover:bg-gray-800 hover:scale-105"
