@@ -111,7 +111,7 @@ const SuccessPage = () => {
             </p>
             <div className="flex justify-center space-x-4">
               <Link
-                href="https://github.com/NanakumorPrincewill"
+                href="https://github.com/Princewill-Nanakumor"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-10 h-10 text-white transition-all duration-300 rounded-lg bg-primary-slate hover:bg-gray-800 hover:scale-105"
