@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 
 const About = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const timerRef = useRef(null);
+  const pauseTimerRef = useRef(null);
 
   // Add your images here
   const images = [
@@ -23,25 +26,76 @@ const About = () => {
     // Add more images as needed
   ];
 
-  // Auto-advance slider
-  useEffect(() => {
-    const timer = setInterval(() => {
+  // Function to start the auto-advance timer
+  const startTimer = useCallback(() => {
+    // Clear any existing timers first
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+    }
+    if (pauseTimerRef.current) {
+      clearTimeout(pauseTimerRef.current);
+    }
+
+    timerRef.current = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
     }, 5000); // Change image every 5 seconds
-
-    return () => clearInterval(timer);
   }, [images.length]);
+
+  // Function to stop the auto-advance timer
+  const stopTimer = useCallback(() => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+    if (pauseTimerRef.current) {
+      clearTimeout(pauseTimerRef.current);
+      pauseTimerRef.current = null;
+    }
+  }, []);
+
+  // Function to pause timer and resume after 8 seconds
+  const pauseAndResume = useCallback(() => {
+    // Clear any existing timers
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+    if (pauseTimerRef.current) {
+      clearTimeout(pauseTimerRef.current);
+    }
+
+    // Set a new pause timer
+    pauseTimerRef.current = setTimeout(() => {
+      startTimer();
+    }, 8000); // Resume after 8 seconds
+  }, [startTimer]);
+
+  // Auto-advance slider
+  useEffect(() => {
+    startTimer();
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+      if (pauseTimerRef.current) {
+        clearTimeout(pauseTimerRef.current);
+      }
+    };
+  }, [startTimer]);
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    pauseAndResume();
   };
 
   const prevImage = () => {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+    pauseAndResume();
   };
 
   const goToImage = (index) => {
     setCurrentImageIndex(index);
+    pauseAndResume();
   };
 
   return (
@@ -243,47 +297,61 @@ const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary-indigo/10 to-accent-emerald/10 rounded-3xl blur-3xl"></div>
 
                 {/* Image Slider Container */}
-                <div className="relative overflow-hidden rounded-3xl shadow-large">
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={currentImageIndex}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 1.1 }}
-                      transition={{ duration: 0.5 }}
-                      className="relative"
-                    >
-                      <Image
-                        width={600}
-                        height={600}
-                        className="object-cover object-center w-full h-auto transition-transform duration-700 hover:scale-105"
-                        alt={images[currentImageIndex].alt}
-                        src={images[currentImageIndex].src}
-                      />
+                <div
+                  className="relative overflow-hidden rounded-3xl shadow-large"
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
+                  <div
+                    className="flex transition-transform duration-700 ease-in-out"
+                    style={{
+                      transform: `translateX(-${currentImageIndex * 100}%)`,
+                    }}
+                  >
+                    {images.map((image, index) => (
+                      <div key={index} className="flex-shrink-0 w-full">
+                        <div className="relative">
+                          <Image
+                            width={600}
+                            height={600}
+                            className="object-cover object-center w-full h-auto transition-transform duration-700 hover:scale-105"
+                            alt={image.alt}
+                            src={image.src}
+                          />
 
-                      {/* Image Title Overlay */}
-                      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
-                        <h4 className="text-lg font-semibold text-white">
-                          {images[currentImageIndex].title}
-                        </h4>
+                          {/* Image Title Overlay */}
+                          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+                            <h4 className="text-lg font-semibold text-white">
+                              {image.alt}
+                            </h4>
+                          </div>
+
+                          {/* Overlay Gradient */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                        </div>
                       </div>
-
-                      {/* Overlay Gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    </motion.div>
-                  </AnimatePresence>
+                    ))}
+                  </div>
 
                   {/* Navigation Arrows */}
                   <button
                     onClick={prevImage}
-                    className="absolute z-10 flex items-center justify-center w-10 h-10 transition-all duration-200 transform -translate-y-1/2 rounded-full shadow-lg left-4 top-1/2 bg-white/80 hover:bg-white hover:scale-110"
+                    className={`absolute z-10 flex items-center justify-center w-10 h-10 transition-all duration-300 transform -translate-y-1/2 rounded-full shadow-lg left-4 top-1/2 bg-white/80 hover:bg-white hover:scale-110 ${
+                      isHovered
+                        ? "opacity-100 translate-x-0"
+                        : "opacity-0 -translate-x-4"
+                    }`}
                   >
                     <ChevronLeft />
                   </button>
 
                   <button
                     onClick={nextImage}
-                    className="absolute z-10 flex items-center justify-center w-10 h-10 transition-all duration-200 transform -translate-y-1/2 rounded-full shadow-lg right-4 top-1/2 bg-white/80 hover:bg-white hover:scale-110"
+                    className={`absolute z-10 flex items-center justify-center w-10 h-10 transition-all duration-300 transform -translate-y-1/2 rounded-full shadow-lg right-4 top-1/2 bg-white/80 hover:bg-white hover:scale-110 ${
+                      isHovered
+                        ? "opacity-100 translate-x-0"
+                        : "opacity-0 translate-x-4"
+                    }`}
                   >
                     <ChevronRight />
                   </button>
