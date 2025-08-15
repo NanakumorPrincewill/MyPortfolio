@@ -213,7 +213,7 @@ export async function POST(request) {
     if (error.code === "ECONNECTION") {
       return NextResponse.json(
         {
-          error: "Unable to send email at the moment. Please try again later.",
+          error: "Unable to send email at the moment. Please try again ",
         },
         { status: 500 }
       );
