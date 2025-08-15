@@ -32,7 +32,7 @@ const projects = [
     technology: "React, Nodemailer, nextjs, tailwind, react-toast",
     github: "https://github.com/Princewill-Nanakumor/MyPortfolio",
     link: "http://www.princewillnanakumor.com/",
-    year: "2022",
+    year: "2023",
   },
 ];
 
