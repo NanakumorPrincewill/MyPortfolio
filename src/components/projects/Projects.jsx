@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const projects = [
   {
     image: "/zodashield.png",
-    name: "Zodashield CRM",
+    name: "CRM",
     description:
       "A modern CRM platform designed for seamless Excel/CSV lead management, powerful analytics, and team collaboration. Built as a full-stack web application with advanced importing, role-based access, and a sleek, responsive interface.",
     technology:
