@@ -12,7 +12,7 @@ const projects = [
       "A modern CRM platform designed for seamless Excel/CSV lead management, powerful analytics, and team collaboration. Built as a full-stack web application with advanced importing, role-based access, and a sleek, responsive interface.",
     technology:
       "Next.js, MongoDB, Tailwind CSS, TypeScript, NextAuth.js, React Query, Zustand",
-    github: "#",
+    github: "https://github.com/Princewill-Nanakumor/Zodashield",
     link: "https://zodashield.com",
     year: "2025",
   },
